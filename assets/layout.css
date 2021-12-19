@@ -1,0 +1,64 @@
+
+.layout__sections form {
+    background-color: #C6D7EB;
+    width: 250px;
+    padding: 30px;
+    /* text-align: center; */
+    color: #0D132C;
+    padding: 20px 30px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 30%;
+    z-index: 5;
+    font-family: Roboto;
+    display: none;
+    animation: growthUp ease-in .3s;
+}
+form h3 {
+    margin: 5px;
+    font-size: 16px;
+}
+input[type="checkbox"]:checked {
+    background-color: antiquewhite;
+  
+  }
+input[type="checkbox"]:checked ~ #Introdution {
+    background-color: red;
+}
+/* input[type=checkbox] {
+    visibility: hidden;
+} */
+input[type="checkbox"]:checked {
+    /* height: 10px;
+    width: 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #0D132C;
+    outline: none; */
+    /* transition-duration: 0.2s; */
+    background-color: #0D132C;
+    /* cursor: pointer; */
+    
+}
+.btn__clocse--layout {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    height: 60px;
+    align-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-self: center;
+    font-size: 14px; 
+}
+form label {
+    font-size: 15px;
+}

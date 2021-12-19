@@ -1,0 +1,77 @@
+.navbar {
+    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-family: Roboto;
+}
+.navbar__logo {
+    margin: 0 30px;
+}
+.img__logo {
+    height: 48px;
+}
+.container__img {
+    display: flex;
+    justify-content: center;
+}
+.container__img img {
+    height: 20px;
+    /* padding: 5px; */
+}
+
+.navbar__sections {
+    display: flex;
+    justify-content: center;
+}
+.navbar__text {
+    margin: 0;
+}
+/* .container__btn {
+
+} */
+.select {
+    font-size: 12px;
+    font-weight: 300;
+    color: #38315f;
+    border-radius: 3px;
+    padding: 2px;
+}
+.btn__edit {
+    padding: 0;
+    align-items: center;
+}
+.container__edit {
+    display: flex;
+    align-items: center;
+}
+.edit-content {
+    border-bottom: 1px solid #AAAAAA;
+}
+.text-decoration {
+    display: flex;
+    border-right: 1px solid #AAAAAA;
+}
+.text-decoration i {
+    color: #cfc5db;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 8px;
+    cursor: pointer;
+}
+.undo-redo {
+    display: flex;
+}
+.undo-redo i {
+    /* color: #5c5c5c; */
+    color: #cfc5db;
+    font-size: 12px;
+    margin: 7px;
+    cursor: pointer;
+}
+.container__edit {
+    margin: 0;
+}

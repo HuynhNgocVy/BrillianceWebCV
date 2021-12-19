@@ -1,0 +1,193 @@
+@keyframes growth {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+      
+}
+@keyframes growthTricks {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+      
+}
+@keyframes out {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    
+      to {
+          opacity: 0;
+          transform: translateY(-300px);
+      }     
+}
+.tip-example {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    background-color: #C6D7EB;
+    color: #0D132C;
+    top: 52px;
+    right: 0;
+    overflow: auto;
+    font-family: Roboto;
+    animation: growth ease-out .3s;
+    z-index: 9;
+}
+.rightDrawer__desktop-container h3 {
+    margin: 10px 2px;
+    font-size: 17px; 
+}
+.close--tips {
+    display: none;
+    animation: out ease-out .4s;
+}
+.start--tips {
+    display: block;
+}
+.hint {
+    background-color: #FFFFFF ;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 13px;
+    border-radius: 2px;
+}
+.hint h5 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+.hint p {
+    margin: 5px 0;
+}
+.tip-label {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+.tip-label h3 {
+    margin: 0;
+    margin-left: 5px;
+}
+.hint__title {
+    display: flex;
+    align-items: center;
+}
+.hint__title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+.btn__clocse--layout__right i {
+    font-size: 22px;
+    cursor: pointer;
+    transform: translateY(-7px);
+}
+.btn__clocse--layout__right i{
+    color:#0D132C;
+}
+.btn__clocse--layout__right i:hover {
+    opacity: 0.7;
+}
+.btn__hint {
+    background-color: #17224d;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    width: 70px;
+    padding: 8px 5px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    border-radius: 10px 0 0 10px;
+    /* left: 100%;
+    top: 100%; */
+}
+.btn__hint img {
+    width: 30px;
+    
+}
+.btn__hint h2 {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 300;
+    color: #fff;
+}
+.btn__tricks {
+    background-color: #17224d;
+    position: fixed;
+    width: 70px;
+    right: 0;
+    bottom: 80px;
+    z-index: 8;
+    padding: 8px 5px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+}
+.btn__tricks img {
+    width: 35px;
+}
+.btn__tricks h2 {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 300;
+    color: #fff;
+}
+.tricks-exmaple {
+    background-color: #C6D7EB;
+    width: 230px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    animation: growthTricks ease-out .3s;
+    display: none;
+}
+.tricks-exmaple h3 {
+    margin: 0 20px;
+    font-size: 16px;
+}
+.trick__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 30px;
+}
+.trick__items {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.trick__items img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.trick__items p{
+    margin: 7px;
+}
+.btn__clocse--tricks__right i {
+    font-size: 19px;
+    transform: translateY(-5px);
+}

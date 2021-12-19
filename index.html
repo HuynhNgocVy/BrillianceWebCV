@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brilliance</title>
+    <link rel = "icon" href = "images/icon.png" type = "image/png">
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/main2.css">
+    <link rel="stylesheet" href="assets/modal.css">
+    <link rel="stylesheet" href="assets/button.css">
+    <link rel="stylesheet" href="assets/dropDown.css">
+    <link rel="stylesheet" href="assets/network.css">
+    <link rel="stylesheet" href="assets/navbar.css">
+    <link rel="stylesheet" href="assets/layout.css">
+    <link rel="stylesheet" href="assets/hint.css">
+    <link rel="stylesheet" href="index.js">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.3.2/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar__sections">
+            <div class="btn btn__duplicate" title="Templates">
+                <div class="container__btn">
+                    <p class="navbar__text">Templates</p>
+                    <div class="container__img">
+                        <img src="images/template.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn btn__layout" title="Add Section">
+                <div class="container__btn">
+                    <p class="navbar__text">Add Section</p>
+                    <div class="container__img">
+                        <img src="images/layout.png">
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn__fonts">
+                    <label>Fonts</label>
+                    <div class="container__section">
+                        <select class="select seclet__fonts">
+                            <option value="Roboto">Roboto</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Monospace">Monospace</option>
+                            <option value="Lora">Lora</option>
+                            <option value="Lobster">Lobster</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="btn btn__fontSize">
+                <label>Sizes</label>
+                <div class="container__section">
+                    <select class="select seclet__fontSize">
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn btn__reset" title="Reset">
+                <div class="container__btn">
+                    <p class="navbar__text">Reset</p>
+                    <div class="container__img">
+                        <img src="images/reset.png">
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn__priview btn__priview1 " title="Preview">
+                <div class="container__btn">
+                    <p class="navbar__text">Preview</p>
+                    <div class="container__img">
+                        <img src="images/preview.png">
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn__print" title="Print">
+                <div class="container__btn">
+                    <p class="navbar__text">Print</p>
+                    <div class="container__img">
+                        <img src="images/print.png">
+                    </div>
+                </div>
+            </div>
+            <div class="btn btn__download" id="btn__download--click" title="Download">
+                <div class="container__btn">
+                    <p class="navbar__text">Download</p>
+                    <div class="container__img">
+                        <img src="images/download.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn__tricks">
+        <img src="images/tricks.png">
+        <h2> Tricks </h2>
+    </div>
+    <div class="btn__hint">
+        <img src="images/hint.png">
+        <h2> Suggestions </h2>
+    </div>
+
+    </div>
+    <div class="containers">
+        <div class="leftDrawer__desktop-container">
+            <div class="drop-down">
+                <button class="leftDrawer__desktop-btn"><i class="fas fa-arrow-left"></i></button>
+                <div class="label"> 
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32 32">
+                        <title>copy</title>
+                        <path d="M20 8v-8h-14l-6 6v18h12v8h20v-24h-12zM6 2.828v3.172h-3.172l3.172-3.172zM2 22v-14h6v-6h10v6l-6 6v8h-10zM18 10.828v3.172h-3.172l3.172-3.172zM30 30h-16v-14h6v-6h10v20z"></path>
+                    </svg>
+                    <h3>Templates</h3>
+                </div>
+                <div class="container__img--template">
+                    <div>
+                        <h4>CV1</h4>
+                        <img class="img__cv active__template" id="img__cv1" src="images/cv-1.png">
+                    </div>
+                    <div>
+                        <h4>CV2</h4>
+                        <img class="img__cv" id="img__cv2" src="images/cv-2.png">    
+                    </div>
+                </div>
+                <div class="label"> 
+                    <img src="images/default.png">
+                    <h3>Default Colors</h3>
+                </div>
+                <div class="template__containner">
+                    <div class="template__cv1">
+                        <div class="color--cv1">
+                            <ul class="container__color">
+                                <li class="primary--color" id="#492C1A" style="background-color: #492C1A"></li>
+                                <li class="backgroundColor--coloumn1" id="#FAF3F2" style="background-color: #FAF3F2"></li>
+                                <li class="backgroundColor--coloumn2" id="#DACFCB" style="background-color: #DACFCB"></li>
+                            </ul>
+                            <ul class="container__color">
+                                <li class="primary--color" id="#292E49" style="background-color: #292E49"></li>
+                                <li class="backgroundColor--coloumn1" id="#E5E9F2" style="background-color: #E5E9F2"></li>
+                                <li class="backgroundColor--coloumn2" id="#C1DAE3" style="background-color: #C1DAE3"></li>
+                            </ul>
+                            <ul class="container__color">
+                                <li class="primary--color" id="#1B1818" style="background-color: #1B1818"></li>
+                                <li class="backgroundColor--coloumn1" id="#EEEEEE" style="background-color: #EEEEEE"></li>
+                                <li class="backgroundColor--coloumn2" id="#AAAAAA" style="background-color: #AAAAAA"></li>
+                            </ul>
+                            <ul class="container__color">
+                                <li class="primary--color" id="#064635" style="background-color: #064635"></li>
+                                <li class="backgroundColor--coloumn1" id="#C9CCD5" style="background-color: #C9CCD5"></li>
+                                <li class="backgroundColor--coloumn2" id="#F4EEA9" style="background-color: #F4EEA9"></li>
+                            </ul>
+                            <ul class="container__color">
+                                <li class="primary--color" id="#A15B5B" style="background-color: #A15B5B"></li>
+                                <li class="backgroundColor--coloumn1" id="#EEDFD8" style="background-color: #EEDFD8"></li>
+                                <li class="backgroundColor--coloumn2" id="#F4D2D1" style="background-color: #F4D2D1"></li>
+                            </ul>
+                            <ul class="container__color">
+                                <li class="primary--color" id="#262A35" style="background-color: #262A35"></li>
+                                <li class="backgroundColor--coloumn1" id="#C3D8D1" style="background-color: #C3D8D1"></li>
+                                <li class="backgroundColor--coloumn2" id="#5F9595" style="background-color: #5F9595"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="template__cv2">
+                        <div class="color--cv2">
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#FF9D8E" style="background-color: #FF9D8E"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#373741" style="background-color: #373741"></li>
+                            </ul>
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#B94A3E" style="background-color: #B94A3E"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#121B22" style="background-color: #121B22"></li>
+                            </ul>
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#A0BACC" style="background-color: #A0BACC"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#022534" style="background-color: #022534"></li>
+                            </ul>
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#888888" style="background-color: #888888"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#0D0D0D" style="background-color: #0D0D0D"></li>
+                            </ul>
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#F8BE4F" style="background-color: #F8BE4F"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#2D1E19" style="background-color: #2D1E19"></li>
+                            </ul>
+                            <ul class="container__color container__color__cv2">
+                                <li class="primary--color__cv2" id="#D8B199" style="background-color: #D8B199"></li>
+                                <li class="backgroundColor--coloumn1__cv2" id="#FFFFFF" style="background-color: #FFFFFF"></li>
+                                <li class="backgroundColor--coloumn2__cv2" id="#515561" style="background-color: #515561"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="label"> 
+                    <img src="images/custom.png">
+                    <h3>Custom Colors</h3>
+                </div>
+                <div class="template__containner">
+                    <div class="template__cv1">
+                        <div class="color--cv1">
+                            <div class="custom--color">
+                                <div class="custom--color__input">
+                                    <input class="primary--color__custom" type="color" value="#492C1A">
+                                </div>
+                                <div class="custom--color__input">
+                                    <input class="backgroundColor--coloumn1__custom" type="color" value="#FAF3F2">
+                                </div>
+                                <div class="custom--color__input">
+                                    <input class="backgroundColor--coloumn2__custom" type="color" value="#DACFCB">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template__cv2">
+                        <div class="color--cv2">
+                            <div class="custom--color">
+                                <div class="custom--color__input custom--color__input__cv2">
+                                    <input class="primary--color__custom__cv2" type="color" value="#FF9D8E">
+                                </div>
+                                <div class="custom--color__input custom--color__input__cv2">
+                                    <input class="backgroundColor--coloumn1__custom__cv2" type="color" value="#FFFFFF">
+                                </div>
+                                <div class="custom--color__input custom--color__input__cv2">
+                                    <input class="backgroundColor--coloumn2__custom__cv2" type="color" value="#373741">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout__container">
+                <div class="layout__sections">
+                    <form>
+                        <h3> Layout </h3>
+                        <div class="btn__clocse--layout"><i class="fas fa-arrow-left"></i></div>
+                        <input type="checkbox" id="Contact" value="1"checked>
+                        <label for="Contact"> Contact</label><br>
+                        <input type="checkbox" id="Social Media" value="2"checked>
+                        <label for="Social Media"> Social Media</label><br>
+                        <input type="checkbox" id="Skills" value="3"checked>
+                        <label for="Skills"> Skills</label><br>
+                        <input type="checkbox" id="Introdution"  value="4" checked>
+                        <label for="Introdution"> Introduction</label><br>
+                        <input type="checkbox" id="Education" value="5"checked>
+                        <label for="Education"> Education</label><br>
+                        <input type="checkbox" id="Experience" value="6"checked>
+                        <label for="Experience"> Experience</label><br>
+                        <input type="checkbox" id="Awards" value="7"checked>
+                        <label for="Awards">Awards</label><br>
+                        <input type="checkbox" id="Activities" value="8">
+                        <label for="Activities">Activities</label><br>
+                        <input type="checkbox" id="Projects" value="9">
+                        <label for="Projects">Projects</label><br>
+                        <input type="checkbox" id="Certificate" value="10">
+                        <label for="Certificate">Certificates</label><br>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="center">
+            <div id="myCv">
+                <div class="myCv__body myCv__body1">
+                    <!--Cột đầu Fptiên-->
+                    <div class="column-1">
+                        <!--Ảnh tải lên-->
+                        <div class="avatar-contact"> 
+                            <label class="avatar-container" for="profile-picture">
+                                <img class="avatar-container-img" id="js-profile-picture" src="images/upload2.png">
+                            </label>
+                            <input class="form__file" type="file" id="profile-picture" name="profile-picture" hidden> 
+                        </div>
+                        <!--Liên lạc-->
+                        <div>
+                            <div class="content__field content--contact">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column1"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column1"></i>
+                                </div> 
+                                <section class="section__header--container">
+                                    <h4 class="section__header"  contenteditable="true">CONTACT</h4>
+                                </section>
+                                <div class="container__add--contact"> 
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down1"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up1"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>
+                                        </div>
+                                        <div class="contact-content-items">
+                                            <div class="contact-content-item">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down1"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up1"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>   
+                                        </div>
+                                        <div class="contact-content-items">
+                                            <div class="contact-content-item">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true">abcdef@gmail.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down1"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up1"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items">
+                                            <div class="contact-content-item">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true">0987654321</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="content__field content--skills">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column1"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column1"></i>
+                                </div> 
+                                <div class="section__header--container">
+                                    <h4 class="section__header"  contenteditable="true">SKILLS</h4>
+                                </div>
+                                <div class="container__add">
+                                    <div class="content-sections__skill">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill" contenteditable="true">Skill 1</label>
+                                        <div class="cv-progress-bar move-2">
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections__skill">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill" contenteditable="true">Skill 2</label>
+                                        <div class="cv-progress-bar move-2">
+                                            <div class="progress" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections__skill">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill" contenteditable="true">Skill 3</label>
+                                        <div class="cv-progress-bar move-2">
+                                            <div class="progress" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            <!--Social media-->
+                            </div>
+                            <div class="content__field content--social">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column1"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column1"></i>
+                                </div> 
+                                <section class="section__header--container">
+                                    <h4 class="section__header"  contenteditable="true">SOCIAL MEDIA</h4>
+                                </section>
+                                <div class="container__add--social">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add__social"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-3">
+                                            <div class="contact-content-item">
+                                                <i class="fab fa-instagram"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add js-add__social"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-3">
+                                            <div class="contact-content-item">
+                                                <i class="fab fa-twitter"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add js-add__social "></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-3">
+                                            <div class="contact-content-item">
+                                                <i class="fab fa-github"></i>
+                                            </div>   
+                                            <span class="contact-content-text" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Cột thứ 2-->
+                    <div class="column-2" >
+                        <div class="about">
+                            <div class="about__name">
+                                <h1 contenteditable="true">trinh lam nhu</h1>
+                            </div>
+                            <div class="devider__line"></div>
+                            <div class="about__job">
+                                <h2 class="job" contenteditable="true">Graphic Designer</h2>
+                            </div>
+                        </div>
+                        <div class="profile__sections">
+                            <div class="profile__section introdution">
+                                <div class="section__header--container">
+                                    <h3 class="title" contenteditable="true">Introduction</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section education">
+                                <div class="section__header--container">
+                                    <h3 class="title" contenteditable="true">Education</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section experience">
+                                <div class="section__header--container">
+                                    <h3 class="title" contenteditable="true">Experience</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section awards">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Awards</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section  activities">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Activities</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section projects">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Projects</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section certificate">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Certificates</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+               <div class="myCv__body myCv__body2">
+                    <!-- Cột đầu tiên -->
+                    <div class="column-1 column-12">
+                        <!-- Ảnh tải lên -->
+                        <div class="avatar-contact">
+                            <label class="avatar-container" for="profile-picture2">
+                                <img class="avatar-container-img avatar-container-img2 " id="js-profile-picture2" src="images/upload1.png">
+                            </label>
+                            <input class="form__file" type="file" id="profile-picture2" name="profile-picture2" hidden> 
+                        </div>
+                        <div>
+                            <div class="content__field content__field2 content--contact">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column12"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column12"></i>
+                                </div> 
+                                <div class="section__header--container2">
+                                    <h4 class="section__header section__header2">CONTACT</h4>
+                                </div>
+                                <div class="container__add--contact"> 
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down5"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up5"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>
+                                        </div>
+                                        <div class="contact-content-items move-5">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down5"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up5"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-5">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true">abcdef@gmail.com</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down5"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up5"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__contact"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-5">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true">0987654321</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__field content__field2 content--social">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column12"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column12"></i>
+                                </div> 
+                                <div class="section__header--container2">
+                                    <h4 class="section__header section__header2">SOCIAL MEDIA</h4>
+                                </div>
+                                <div class="container__add--social">
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__social"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-32">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fab fa-instagram"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__social"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-32">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fab fa-twitter"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down3"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up3"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete2"></i>
+                                            <i class="fas fa-plus js-add__social"></i>
+                                        
+                                        </div>
+                                        <div class="contact-content-items move-32">
+                                            <div class="contact-content-item contact-content-item2">
+                                                <i class="fab fa-github"></i>
+                                            </div>   
+                                            <span class="contact-content-text contact-content-text2" contenteditable="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content__field content__field2 content--skills ">
+                                <div class="move__items">
+                                    <i class="far fa-arrow-alt-circle-down js--down__column12"></i>
+                                    <i class="far fa-arrow-alt-circle-up js--up__column12"></i>
+                                </div> 
+                                <div class="section__header--container2 ">
+                                    <h4 class="section__header section__header2">SKILLS</h4>
+                                </div>
+                                <div class="container__add">
+                                    <div class="content-sections__skill content-sections__skill2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete3"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill section__skill2" contenteditable="true">Skill 1</label>
+                                        <div class="cv-progress-bar cv-progress-bar_cv2 move-2">
+                                            <div class="progress progress2" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections__skill content-sections__skill2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete3"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill section__skill2" contenteditable="true">Skill 2</label>
+                                        <div class="cv-progress-bar cv-progress-bar_cv2 move-2">
+                                            <div class="progress progress2" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-sections__skill content-sections__skill2">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down2"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up2"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete3"></i>
+                                            <i class="fas fa-plus js-add"></i>
+                                        
+                                        </div>
+                                        <label class="section__skill section__skill2" contenteditable="true">Skill 3</label>
+                                        <div class="cv-progress-bar cv-progress-bar_cv2 move-2">
+                                            <div class="progress progress2" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>     
+                    </div>
+              <!-- Cột thứ 2 -->
+                    <div class="column-2 column-22">
+                        <div class="about2">
+                            <div class="about__name">
+                                <h1 class="name"contenteditable="true">trinh lam nhu</h1>
+                            </div>
+                            <div class="about__job">
+                                <h2 class="job2" contenteditable="true">Graphic Designer</h2>
+                            </div>
+                            <p class="content2 introdution"contenteditable="true" introdution>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore suscipit assumenda vel necessitatibus, dicta similique, deserunt nihil sit debitis, perspiciatis accusantium molestiae illo architecto nostrum repudiandae omnis sequi? Animi, impedit.
+                            </p>
+                        </div>
+        
+                        <div class="profile__sections2">
+                            <div class="profile__section education2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Education</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section experience2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Experience</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section awards2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Awards</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section activities2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Activities</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section projects2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Projects</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__section certificate2">
+                                <div class="section__header--container">
+                                    <h3 class="title"  contenteditable="true">Certificates</h3>
+                                </div>
+                                <div class="container__add--content">
+                                    <div class="content-sections">
+                                        <div class="add--delete">
+                                            <i class="far fa-arrow-alt-circle-down js-down4"></i>
+                                            <i class="far fa-arrow-alt-circle-up js-up4"></i>
+                                            <i class="far fa-trash-alt js-delete js-delete4"></i>
+                                            <i class="fas fa-plus js-add--content"></i>                              
+                                        </div>
+                                        <p class="content content2" contenteditable="true">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, facilis tempore minus ipsa blanditiis tempora atque dolor eius vitae dolorem dolorum quibusdam, error quis laboriosam magni. Officia quo repellat in!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <div class="rightDrawer__desktop-container">
+            <div class="tip-example close--tips">
+                <div class="btn__clocse--layout__right"><i class="fas fa-sort-down"></i></div>
+                <div class="tip-label">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
+                        <title>bulb</title>
+                        <path d="M16 0c-6.076 0-11 4.924-11 11 0 4.031 3.688 8.303 5.031 12.055 2.003 5.595 1.781 8.945 5.969 8.945 4.25 0 3.965-3.334 5.969-8.922 1.347-3.76 5.031-8.078 5.031-12.078 0-6.076-4.926-11-11-11zM18.592 27.176l-4.958 0.619c-0.177-0.512-0.367-1.111-0.598-1.893-0.003-0.010-0.007-0.021-0.009-0.031l6.188-0.773c-0.088 0.295-0.182 0.605-0.264 0.883-0.131 0.449-0.248 0.839-0.359 1.195zM12.736 24.908c-0.182-0.602-0.387-1.236-0.615-1.908h7.766c-0.123 0.359-0.246 0.719-0.352 1.059l-6.799 0.849zM16 30c-1.013 0-1.479-0.117-1.997-1.25l4.238-0.531c-0.614 1.654-1.061 1.781-2.241 1.781zM20.672 21h-9.333c-0.498-1.080-1.096-2.16-1.686-3.217-1.305-2.335-2.653-4.75-2.653-6.783 0-4.963 4.037-9 9-9s9 4.037 9 9c0 2.018-1.35 4.446-2.656 6.795-0.584 1.053-1.178 2.131-1.672 3.205zM16 5c0.275 0 0.5 0.224 0.5 0.5s-0.224 0.5-0.5 0.5c-2.757 0-5 2.243-5 5 0 0.276-0.224 0.5-0.5 0.5s-0.5-0.224-0.5-0.5c0-3.309 2.691-6 6-6z"></path>
+                    </svg>
+                    <h3>Tips</h3>
+                </div>
+                <div class="hint__container">
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/introduction.png">
+                            <h5>Introduction</h5>
+                        </div>
+                        <p>Write a short introduction about yourself that highlights your career progress, skills, and achievements. </p>
+                    </div>
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/education.png">
+                            <h5>Education</h5>
+                        </div>
+                        <p>Describe your education by listing colleges and universities you have attended; outstanding achievements or extracurricular activities you participate in during your studies.</p>
+                    </div>
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/experience.png">
+                            <h5>Experience</h5>
+                        </div>
+                        <p>List your work experience (positions you have held, your responsibilities in that position). For example: </p>
+                        <p><b>Job position</b><i> - Company name - Time</i></p>
+                        <p>- Job description:</p>
+                        <p>- Achievements:</p>
+                    </div>
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/skills.png">
+                            <h5>Skills</h5>
+                        </div>
+                        <p>List the skills related to the job you are applying for, including: hard skills, soft skills, personality ..</p>
+                    </div>
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/award.png">
+                            <h5>Awards</h5>
+                        </div>
+                        <p>List the awards you have won (can list: award name, achievement, organizational unit, details of award content, ...). For example:</p>
+                        <p><b>01-2021:   </b>Award name</p>
+                        <p><b>02-2021:   </b>Award name</p>
+                    </div>
+                    <div class="hint">
+                        <div class="hint__title">
+                            <img src="images/social.png">
+                            <h5>Social Media</h5>
+                        </div>
+                        <p>Links to personal websites or work-related social media accounts such as Linkedin can be added. Do not fill in personal social networking accounts, containing private information not related to your work.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="tricks-exmaple">
+        <div class="btn__clocse--layout__right btn__clocse--tricks__right"><i class="fas fa-sort-down"></i></div>
+        <h3>Tricks</h3>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/bold.png">
+                <p>Bold</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl B</b> </div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/italic.png">
+                <p>Italic</p>
+            </div>
+            <div class="trick__content">  <b>Ctrl I</b></div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/underline.png">
+                <p>Underline</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl U</b> </div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/undo.png">
+                <p>Undo</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl Z</b> </div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/redo.png">
+                <p>Redo</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl Shift Z</b> </div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/reset-trick.png">
+                <p>Reset</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl R</b> </div>
+        </div>
+        <div class="trick__container">
+            <div class="trick__items">
+                <img src="images/print.png">
+                <p>Print</p>
+            </div>
+            <div class="trick__content"> <b>Ctrl P</b> </div>
+        </div>
+    </div>
+        <div class="modal">
+            <div class="modal__body">
+                <div class="modal__container">
+                    <div class="modal__container--items"> 
+                        <i id="close__item" class="fas fa-times js-close"></i>
+                    </div>
+                    <div class="modal__container--label"> 
+                        <h3> DOWNLOAD CV</h3>
+                    </div>
+                    <div class="modal__container--input"> 
+                        <input type="text" id="download-input" name="download" for="download" placeholder="File Name" required>
+                        <span> .PDF </span>
+                        <div id="wrong-password" style="color:red; font-size: 14px;"></div>
+                    </div>
+                    <div class="modal__container--download">  
+                        <button class="btn__download" id="download-pdf"> <i class="fas fa-cloud-download-alt"></i> DOWNLOAD</button>
+                    </div>
+                </div>
+            </div>   
+        </div>      
+        <div class="modal modal__preview">
+            <div class="modal__preview--body">
+                <div id ="previewImg"></div>
+            </div>   
+        </div>
+        <div class="modal modal__preview modal__preview2">
+            <div class="modal__preview--body2">
+                <div id ="previewImg2"></div>
+            </div>   
+        </div>
+        <div class="modal modal__delete">  
+            <div class="modal__delete--body">
+                <div class="modal__container--items"> 
+                    <i id="close__delete"class="fas fa-times"></i>
+                </div>
+                <div class="modal__container--label delete"> 
+                    <h3> Are you sure delete?</h3>
+                </div>
+                <div class="btn__delete">
+                    <button class="btn--ok">Ok</button>
+                    <button class="btn--cancel">Cancel</button>
+                </div>
+            </div>   
+        </div>
+        <div class="modal modal__add--social">  
+            <div class="modal__add--body">
+                <div class="modal__container--items"> 
+                    <i id="close__add"class="fas fa-times"></i>
+                </div>
+                <div class="modal__container--label"> 
+                    <h3>Choose social networks</h3>
+                </div>
+                <div class="modal__container--content"> 
+                    <div class="modal__container--option">
+                        <button class="btn-add__social facebook-f">
+                            <i class="fab fa-facebook-square"></i>
+                            <div class="text">Facebook</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social instagram">
+                            <i class="fab fa-instagram-square"></i>
+                            <div class="text">Instagram</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social twitter">
+                            <i class="fab fa-twitter-square"></i>
+                            <div class="text">Twitter</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social linkedin-in">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="text">LinkedIn</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social github">
+                            <i class="fab fa-github-square"></i>
+                            <div class="text">Github</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social whatsapp">
+                            <i class="fab fa-whatsapp-square"></i>
+                            <div class="text">Whatsapp</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__social telegram-plane">
+                            <i class="fab fa-telegram-plane"></i>
+                            <div class="text">Telegram</div> 
+                        </button>
+                    </div>
+
+                </div>
+            </div>   
+        </div>
+        <div class="modal modal__add--contact">  
+            <div class="modal__add--body">
+                <div class="modal__container--items"> 
+                    <i id="close__add--contact"class="fas fa-times"></i>
+                </div>
+                <div class="modal__container--label"> 
+                    <h3>Choose contacts</h3>
+                </div>
+                <div class="modal__container--content"> 
+                    <div class="modal__container--option">
+                        <button class="btn-add__contact map-marker-alt">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="text">Address</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__contact envelope">
+                            <i class="fas fa-envelope-open"></i>
+                            <div class="text">Gmail</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__contact phone-alt">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="text">Phone number</div> 
+                        </button>
+                    </div>
+                    <div class="modal__container--option">
+                        <button class="btn-add__contact globe-asia">
+                            <i class="fas fa-globe-asia"></i>
+                            <div class="text">Website</div> 
+                        </button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        
+    <script src="index.js"></script>
+</body>
+</html>

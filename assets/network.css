@@ -1,0 +1,66 @@
+.modal__container--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.modal__container--label h3{
+    font-size: 18px;
+    font-weight: 900;
+    color: #17224d;
+}
+.modal__container--option {
+    margin: 5px 10px;
+}
+.btn-add__social {
+    width: 80px;
+    height: 65px;
+    /* padding: 10px; */
+    font-size: 14px;
+    font-weight: 500;
+    color: #373741;
+    border-radius: 10px;
+    border: none;
+    background-color:#C6D7EB;
+    border: 2px solid transparent;
+}
+.btn-add__social i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.btn-add__social:hover {
+    background-color: #adacac;
+}
+.text {
+    font-size: 9px;
+    font-weight: 700;
+}
+.btn-add__social:focus {
+    border: 2px solid #35C135;
+    background-color: #fff;
+}
+.btn-add__contact {
+    width: 80px;
+    height: 65px;
+    /* padding: 10px; */
+    font-size: 14px;
+    font-weight: 500;
+    color: #373741;
+    border-radius: 10px;
+    border: none;
+    background-color: #C6D7EB;
+    border: 2px solid transparent;
+}
+.btn-add__contact i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.btn-add__contact:hover {
+    background-color: #adacac;
+}
+
+.btn-add__contact:focus {
+    border: 2px solid #35C135;
+    background-color: #fff;
+}

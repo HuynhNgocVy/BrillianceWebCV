@@ -1,0 +1,74 @@
+/* .btn {
+    display: flex;
+    margin: 0 30px;
+} */
+.btn-container {
+    margin: auto;
+    display: flex;
+    justify-self: center;
+}
+.btn {
+    /* display: flex; */
+    min-width: 80px;
+    height: 52px;
+    justify-content: center;
+    padding:  0 8px;
+    color: #38315f;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #AAAA;
+}
+
+.btn__download i {
+    margin: 0 5px;
+    align-self: flex-start;
+    margin-right: 8px;
+} 
+.btn__priview i {
+    margin: 0 10px 0 0;
+    align-self: center;
+}
+.btn__duplicate i {
+    margin: 0 10px 2px 0;
+    align-self: center;
+}
+.btn:hover
+.container__btn{
+    transform: scale(1.1);
+    transition: linear 0.2s;
+    color: #C6D7EB;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.btn__fonts:hover, .btn__fontSize:hover, .btn__edit:hover, .btn__color:hover {
+    color: #C6D7EB;
+    transition: ease 0.2s;
+}
+#download-pdf {
+    display: flex;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    border:none;
+    outline: none;
+    color: #fff;
+    background-color: #17224D;
+}
+#download-pdf i {
+    color: #fff;
+}
+#download-pdf:hover {
+    opacity: 0.9;
+}
+.modal__body .modal__container--label h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+.modal__container--input span {
+    font-size: 15px;
+}
